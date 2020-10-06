@@ -1,0 +1,15 @@
+.DS_Store
+env.py
+.ipynb_checkpoints/
+__pycache__
+test.txt
+iris.csv
+anscombe.csv
+titanic.csv
+iris.csv
+Spreadsheets_Exercises.xlsx
+*.csv
+Untidy-data.tar
+logistic_regression_notes_walkthrough.ipynb
+student-mat.csv
+student/
