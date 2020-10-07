@@ -33,32 +33,34 @@ We will deliver the following:
 - model.py
     - A Pythong file containing a function that fits, predicts, and evaluates the final model on the test data.
     
-- A walkthrough-style presentation that summarize our findings about the drivers of the single unit property values. 
+- A presentation that summarizes our findings about the drivers of the single unit property values. 
 
 - zillow_presentation.pptx
     - A PowerPoint file that contains the slides used in the presentation
 
 ## Data Dictionary
 
-bathroom_count: Represents the number of bathrooms in a house
+bathroom_count (renamed from bathroomcnt): Represents the number of bathrooms in a house
 
-bathroomcnt: Represents the number of bathrooms in a house
+bedroom_count (renamed from bedroomcnt): Represents the number of bedrooms in a house
 
-bedroom_count: Represents the number of bedrooms in a house
+lot_size_sq_feet (renamed from lotsizesquarefeet): Represents the amount of square footing in the lot a house is located on
 
-bedroomcnt: Represents the number of bedrooms in a house
+tax_dollar_value (renamed from taxvaluedollarcnt): Represents the values of single unit properties that the tax district assesses
 
-calculatedfinishedsquarefeet: Represents the amount of square footing in a house
+unit_sq_feet (renamed from calculatedfinishedsquarefeet): Represents the amount of square footing in a house
 
-lot_size_sq_fee: Represents the amount of square footing in the lot a house is located on
+## Reasons for Selected Columns
 
-lotsizesquarefeet: Represents the amount of square footing in the lot a house is located on
+bathroom_count (bathroomcnt): The names of the alternative columns, fullbathcnt and calculatedbathnbr, did not seem as straightfoward as bathroomcnt, so we opted to use bathroomcnt. We also tested and found that there were only 13 rows that differed in values between bathroomcnt and each of the alternatives so were confident that the differences would not have a serious impact.
 
-tax_dollar_value: Represents the values of single unit properties that the tax district assesses
+bedroom_count (bedroom_count): This was the only column that held solely bedroom counts so we chose it by default.
 
-taxvaluedollarcnt: Represents the values of single unit properties that the tax district assesses
+unit_sq_feet (calculatedfinishedsquarefeet): We tested and found that there were only 13 rows with differing values in calculatedfinishedsquarefeet and finishedsquarefeet12. The "12" in finishedsquarefeet12 suggested to us at that the differing values in this column were not the simple square feet area that we were looking for, so we opted for calculatedfinishedsquarefeet.
 
-unit_sq_feet: Represents the amount of square footing in a house
+lot_size_sq_ft (lotsizesquarefeet): This was the only column that held lot size square feet so we chose it by default.
+
+tax_dollar_value (taxvaluedollarcnt): We used this as our target variable since it is the sum of structuretaxvaluedollarcnt and landtaxvaluedollarcnt. This implied that it was the best column to represent the total value assessed by the tax office. 
 
 ## Initial Thoughts
 
