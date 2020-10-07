@@ -1,4 +1,4 @@
-### Single Unit Properties at Zillow: Predicting Values and Identifying Drivers
+# Single Unit Properties at Zillow: Predicting Values and Identifying Drivers
 
 ## Background
 
@@ -81,25 +81,36 @@ Ha = Houses with more than the average number of bedrooms are valued higher than
 
 ## Project Plan
 
-1) Create acquire.py
+1) Acquire:
+- Acquire data from zillow table in Codeup data science database server 
+- Create acquire.py file using function(s) that acquired data
 
-- steps of phase go here
+2) Preparation:
+- Address null values (drop or fill)
+- Ensure data types are good fit for data
+- Rename columns if they are not easily understood or read
+- Scale data if needed
+- Split data into train, validate, test
+- Create prepare.py that contains function(s) to automate these changes
 
-2) Create prepare.py
+3) Exploraton:
+- Create heatmap to see correlation of viable features with one another and target variable
+- Create visualizations to further identify relationships between features and target variable
+- Run hypothesis tests to accept or reject hypothesis that are informed by our discoveries
 
-- steps of phase go here
-
-3) Explore
-
-- steps of phase go here
-
-3) Model
-
-- steps of phase go here
+4) Model:
+- Create baseline model using mean of target variable to gauge what performance metric (RMSE)  our model must surpass
+- Use feature engineering function (RFE) to rank features based on how well they can be used to predict house values
+- Creates several linear regression models and use on train data
+- Select 2-3 models that performed the best on train data and use on validate
+- Select model that performed the best on validate dataset and use on test dataset
+- Evaluate all findings
 
 4) conclusion
+- Documents all key takeaways
+- Provide recommendations based on findings
+- Inform about plans for the future of project
 
-- steps of phase go here
 
 ## How to Reproduce
 
