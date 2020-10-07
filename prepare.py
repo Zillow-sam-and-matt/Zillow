@@ -7,7 +7,7 @@ from sklearn.model_selection import train_test_split
 
 def prep_zillow_data(target):
     """
-    function acquires zillow house data, prepares it via removing null values, renaming columns, scaling data, and returning data split into all of the data frames needed to progress through project notebook.
+    function takes in name of targeted variable column (taxvaluedollarcnt), acquires zillow house data, prepares it via removing null values, renaming columns, scaling data, and returning data split into all of the data frames needed to progress through project notebook.
     """
     # acquire zillow data
     df = get_zillow_data()
