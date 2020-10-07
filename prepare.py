@@ -41,6 +41,8 @@ def prep_zillow_data(target):
     X_test_scaled = pd.DataFrame(scaler.transform(X_test))
 
     # renaming data frame columns 
+    train.rename(columns = {'taxvaluedollarcnt': 'tax_dollar_value','calculatedfinishedsquarefeet' : 'unit_sq_feet',	'bedroomcnt' : 'bedroom_count',	'bathroomcnt' : 'bathroom_count', 'lotsizesquarefeet' : 'lot_size_sq_feet' }, inplace=True)
+
     X_train_scaled.rename(columns = {0: 'unit_sq_feet', 1: 'bedroom_count', 2: 'bathroom_count', 3: 'lot_size_sq_feet' }, inplace=True)
     X_validate_scaled.rename(columns = {0: 'unit_sq_feet', 1: 'bedroom_count', 2: 'bathroom_count',  3: 'lot_size_sq_feet'}, inplace=True)
     X_test_scaled.rename(columns = {0: 'unit_sq_feet', 1: 'bedroom_count', 2: 'bathroom_count',  3: 'lot_size_sq_feet'}, inplace=True)
