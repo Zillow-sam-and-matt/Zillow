@@ -11,9 +11,10 @@ Zillow serves the full lifecycle of owning and living in a home: buying, selling
 
 ## Goals
 
-This project has two primary goals:
+This project has three primary goals:
 1) Create a model that will acurrately predict the values of single unit properties that the tax district assesses.
 2) Identify and report the drivers of the values of single unit properties that the tax district assesses.
+3) Provide a dataframe that contains the state, county, tax rate and county tax rate of each property as well as a dataframe that reflects the each county and their respective tax rate.
 
 We will deliver the following: 
 
@@ -106,7 +107,11 @@ Ha = Houses with more than the average number of bedrooms are valued higher than
 - Select model that performed the best on validate dataset and use on test dataset
 - Evaluate all findings
 
-4) conclusion
+5) Additional item: Tax Rates by County
+- Create dataframe that includes requested data per property
+- Create dataframe that includes requested data per county
+
+6) Conclusion
 - Documents all key takeaways
 - Provide recommendations based on findings
 - Inform about plans for the future of project
