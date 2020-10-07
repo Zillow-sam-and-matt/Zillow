@@ -11,8 +11,7 @@ def get_connection(db, user=user, host=host, password=password):
     """
     return f'mysql+pymysql://{user}:{password}@{host}/{db}'
 
-
-def new_zillow_data():
+def get_zillow_data():
     """
     Function connects to the data science database and returns a data frame containing Zillow data for houses whose last transaction was in May through June 2017.
     """
@@ -23,17 +22,4 @@ def new_zillow_data():
     # writes data to csv file
     df.to_csv('zillow_df.csv')
     # returns DF 
-    return df
-
-def get_zillow_data(cached=False):
-    """
-    Function looks for a file named zillow_df and if none is found, it will connect to data science database to create a DF containing Zillow house data. Otherwise returns a DF with its contents. If a zillow_df file is found the function will read in its contents as a DF.
-    """
-    # if there is no zillow_df file, a new one will be created
-    if cached or os.path.isfile('zillow_df.csv') == False:
-        df = new_zillow_data()
-    # if a zillow_df file is found, it will be read in as a DF
-    else:
-        df = pd.read_csv('zillow_df.csv', index_col=0)
-    # returns DF
     return df
