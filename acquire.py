@@ -11,15 +11,19 @@ def get_connection(db, user=user, host=host, password=password):
     """
     return f'mysql+pymysql://{user}:{password}@{host}/{db}'
 
+# function to get data for preparation, exploration, modeling
 def get_zillow_data():
     """
-    Function connects to the data science database and returns a data frame containing Zillow data for houses whose last transaction was in May through June 2017.
+    Function connects to the data science database and returns a data frame containing Zillow data for properties whose last transaction was in May through June 2017. This data will be used to find key drivers of property value and to create a model that predicts property value.
     """
     # SQL query string
     sql_query = "SELECT * FROM properties_2017 JOIN predictions_2017 on predictions_2017.parcelid = properties_2017.parcelid WHERE unitcnt = 1 AND transactiondate BETWEEN '2017-05-01' AND '2017-06-30'"
-    # creates dataframe using data from DS database
+    
+    # creates dataframe using data from DS database, Zillow table
     df = pd.read_sql(sql_query, get_connection('zillow'))
-    # writes data to csv file
+    
+    # writes data to csv file for future use
     df.to_csv('zillow_df.csv')
-    # returns DF 
+    
+    # returns data frame
     return df
