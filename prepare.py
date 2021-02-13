@@ -5,12 +5,11 @@ from acquire import get_zillow_data
 from sklearn.preprocessing import MinMaxScaler
 from sklearn.model_selection import train_test_split
 
-def prep_zillow_data(target):
+def prep_zillow_data(df):
     """
-    function takes in name of targeted variable column (taxvaluedollarcnt), acquires zillow house data, prepares it via removing null values, renaming columns, scaling data, and returning data split into all of the data frames needed to progress through project notebook.
+    Function takes in data frame and prepares it via the changes outlined in the "prepare takeaways" section of the project notebook.
     """
-    # acquire zillow data
-    df = get_zillow_data()
+    
     # filter columns down to the target variable (taxvaluedollarcnt) and the final four columns from prep
     df = df[['calculatedfinishedsquarefeet', 'bedroomcnt', 'bathroomcnt', 'lotsizesquarefeet', 'taxvaluedollarcnt']]
     
@@ -23,14 +22,14 @@ def prep_zillow_data(target):
 
     # specifying which columns to keep in outputted dataframe
     # x = features | y = target variable
-    X_train = train.drop(columns=[target])
-    y_train = train[[target]]
+    X_train = train.drop(columns=['taxvaluedollarcnt'])
+    y_train = train[['taxvaluedollarcnt']]
     
-    X_validate = validate.drop(columns=[target])
-    y_validate = validate[[target]]
+    X_validate = validate.drop(columns=['taxvaluedollarcnt'])
+    y_validate = validate[['taxvaluedollarcnt']]
     
-    X_test = test.drop(columns=[target])
-    y_test = test[[target]]
+    X_test = test.drop(columns=['taxvaluedollarcnt'])
+    y_test = test[['taxvaluedollarcnt']]
     
     # importing scaler
     scaler = sklearn.preprocessing.MinMaxScaler()
