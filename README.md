@@ -126,3 +126,27 @@ Install acquire.py, prepare.py and model.py into your working directory. (You mu
 Run the jupyter notebook.
 
 ## Key Findings and Takeaways
+
+- Through exploration we discovered that drivers of property value include bathroom_count, bedroom_count, unit_sq_feet, and lot_size_sq_feet
+    
+- Based on the results of a pearson correlation test, lot_size_sq_feet was thought to have virtually no relationship with property_value, our models performed worse without it
+
+Recursive Feature Elimination ranked the importance of each feature in predicting value as follows:
+
+- 1 - bathroom_count
+- 2 - bedroom_count
+- 3 - unit_sq_feet
+- 4 - lot_size_sq_feet
+
+Recommendations
+- When assessing the value of properties, we should focus our attention on these drivers to help improve the accuracy of our value assessments.
+- We should also display these features more prominently in our search result thumbnails as currently the font is relatively small.
+
+We've created a linear regression model that uses these variables to predict property values.
+- The model outperformed a baseline model that constantly predicts the mean value of homes
+- The model's RMSE value on all data sets was consistently lower than all of its competitors 
+- In one instance, the model only performed nearly as well on data it had never seen before (test) than it did on the data it was trained on (train). 
+
+In the future
+- We'd like to collect a wider range of data since many of the features in our dataset contained a high amount of null values and had to be excluded from our project.
+    - With more features available, we may be able to incorporate new ones that improve our model's ability to make accurate predictions on property values.
