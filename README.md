@@ -89,6 +89,7 @@ Ha = Houses with more than the average number of bedrooms are valued higher than
 - Create acquire.py file using function(s) that acquired data
 
 2) Preparation:
+- Remove duplicate rows (if any) since each row should have a unique ID at minimum
 - Address null values (drop or fill)
 - Ensure data types are good fit for data
 - Rename columns if they are not easily understood or read
