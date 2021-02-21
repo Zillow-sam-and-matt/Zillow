@@ -9,7 +9,6 @@ def prep_zillow_data(df):
     """
     Function takes in data frame and prepares it via the changes outlined in the "prepare takeaways" section of the project notebook.
     """
-    
     # filter columns down to the target variable (taxvaluedollarcnt) and the final four columns from prep
     df = df[['calculatedfinishedsquarefeet', 'bedroomcnt', 'bathroomcnt', 'lotsizesquarefeet', 'taxvaluedollarcnt']]
     
