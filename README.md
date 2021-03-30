@@ -34,9 +34,7 @@ We will deliver the following:
     - A Pythong file containing a function that fits, predicts, and evaluates the final model on the test data.
     
 - A presentation that summarizes our findings about the drivers of the single unit property values. 
-
-- zillow_presentation.pptx
-    - A PowerPoint file that contains the slides used in the presentation
+    - Slides for presentation can be found [here](https://docs.google.com/presentation/d/1aJSTMMlCU5ACdLbArS9C1LgzC6zFv2dAd3x1y8eyJJs/edit?usp=sharing).
 
 ## Data Dictionary
 
