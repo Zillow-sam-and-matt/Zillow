@@ -34,7 +34,7 @@ We will deliver the following:
     - A Pythong file containing a function that fits, predicts, and evaluates the final model on the test data.
     
 - A presentation that summarizes our findings about the drivers of the single unit property values. 
-    - Slides for presentation can be found [here](https://docs.google.com/presentation/d/1aJSTMMlCU5ACdLbArS9C1LgzC6zFv2dAd3x1y8eyJJs/edit?usp=sharing).
+    - Slides for presentation can be found [here](https://docs.google.com/presentation/d/16aubNotM82Ej5DSp-u9sU1O6pjYjxIoKPAfXCNA3hpo/edit?usp=sharing).
 
 ## Data Dictionary
 
